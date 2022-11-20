@@ -2,7 +2,7 @@
 {% block content %}
     {% for table in tables %}
         <!-- {{titles[loop.index]}} -->
-        <h2>Result</h2>
+        <h2>Result : {{ word }}</h2>
         {{ table|safe }}
     {% endfor %}
 {% endblock %}

@@ -18,5 +18,5 @@ def result():
         probabilities = actions.get_probabilities(actions.get_count(word_l, word))
         calculate = actions.calculate(word, word_l, probabilities)
         if word in word_l:
-            return render_template("result.html", tables=[f"We have {word} in our dictionary!"], titles="Result")
-        return render_template("result.html", tables=[calculate.to_html(classes="data")], titles="Result")
+            return render_template("result.html", word=word, tables=[f"We have {word} in our dictionary!"], titles="Result")
+        return render_template("result.html", word=word, tables=[calculate.to_html(classes="data")], titles="Result")

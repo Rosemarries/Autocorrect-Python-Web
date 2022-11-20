@@ -74,4 +74,5 @@ p {
 
 .dataframe tr {
     text-align: left !important;
+    font-size: 16px;
 }
