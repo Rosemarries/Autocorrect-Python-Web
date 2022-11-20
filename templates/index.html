@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
     <title>Autocorrect</title>
 </head>
 
@@ -13,7 +13,7 @@
     <div class="Head">
         <h1>Welcome to autocorrect!</h1>
     </div>
-    <form class="inputing" action="http://localhost:5555/views/result" method="POST">
+    <form class="inputing" method="POST">
         <p class="instruction_text">Please input your text and we will autocorrect it!</p><br>
         <input type="text" id="word" name="word"><br><br>
         <input type="submit" id="submit" value="submit">
@@ -24,57 +24,3 @@
 </body>
 
 </html>
-
-
-<style>
-    * {
-        font-family: monospace;
-        background-color: #222;
-        margin: 1%;
-        padding: 1%;
-        color: #fff;
-    }
-
-    p {
-        font-size: 16px;
-        background-color: #333;
-    }
-
-    .Head {
-        /* display: flex; */
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .inputing {
-        text-align: center;
-        background-color: #333;
-        border-radius: 15px;
-        margin: 0% 20% 0% 20%;
-    }
-
-    #word {
-        font-size: 16px;
-        border: none;
-        border-radius: 10px;
-        background-color: #fff;
-        color: black;
-        width: 60%;
-        padding: 2%;
-    }
-
-    #submit {
-        font-size: 16px;
-        text-align: center;
-        border: none;
-        border-radius: 5px;
-        width: 15%;
-        padding: 1%;
-    }
-
-    #submit:hover{
-        background-color: rgb(43, 255, 0);
-        color: black;
-        transition: 0.4s;
-    }
-</style>

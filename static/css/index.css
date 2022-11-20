@@ -1,0 +1,50 @@
+* {
+    font-family: monospace;
+    background-color: #222;
+    margin: 1%;
+    padding: 1%;
+    color: #fff;
+}
+
+p {
+    font-size: 16px;
+    background-color: #333;
+}
+
+.Head {
+    /* display: flex; */
+    font-size: 24px;
+    text-align: center;
+}
+
+.inputing {
+    text-align: center;
+    background-color: #333;
+    border-radius: 15px;
+    margin: 0% 20% 0% 20%;
+}
+
+#word {
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: black;
+    width: 60%;
+    padding: 2%;
+}
+
+#submit {
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: 15%;
+    padding: 1%;
+}
+
+#submit:hover {
+    background-color: rgb(43, 255, 0);
+    color: black;
+    transition: 0.4s;
+}
