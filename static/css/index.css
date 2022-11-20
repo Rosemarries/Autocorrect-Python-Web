@@ -48,3 +48,30 @@ p {
     color: black;
     transition: 0.4s;
 }
+
+.dataframe {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.dataframe h2 {
+    margin: auto;
+    text-align: center;
+}
+
+.dataframe th {
+    background: rgb(61, 164, 166);
+    background: linear-gradient(0deg, rgba(61, 164, 166, 1) 0%, rgba(31, 198, 190, 1) 100%);
+    padding: 10px;
+    font-family: arial;
+    font-size: 120%;
+    color: white;
+    border: 2px solid white;
+    text-align: center !important;
+}
+
+.dataframe tr {
+    text-align: left !important;
+}
