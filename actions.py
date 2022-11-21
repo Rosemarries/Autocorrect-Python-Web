@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import textdistance
 import time
+import os
 
 def process_data(file_name):
     words = []
@@ -14,7 +15,8 @@ def process_data(file_name):
     return words
 
 def save_vocab():
-    word_l = process_data("words4.txt")
+    print(os.getcwd())
+    word_l = process_data(os.getcwd()+"/words4.txt")
     vocab = set(word_l)
     print(f"There are {len(vocab)} words in the vocabulary.\n")
     return word_l
