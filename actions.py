@@ -131,7 +131,9 @@ def min_edit_distance(source, target, insert_cost=1, delete_cost=1, replace_cost
     return Dimension, minimum_edit_distance
 
 def similarity(word, word_l):
+    # return [textdistance.algorithms.levenshtein.normalized_similarity(v, word) for v in word_l]
     return [1-(textdistance.Jaccard(qval=2).distance(v,word)) for v in word_l]
+    # return [(textdistance.Jaccard(qval=2).similarity(v, word)) for v in word_l]
 
 def calculate(word, word_l, probabilities):
     if word in word_l:
@@ -176,5 +178,5 @@ def summary(word_l, sim,  probs, min_edit=[]):
     if not len(min_edit):
         output = df.sort_values(['Similarity'], ascending=False).head(10)
     else:
-        output = df.sort_values(['Min Edit', 'Similarity'], ascending=[True, False]).head(10).reset_index().drop(columns="index")
+        output = df.sort_values(['Min Edit', 'Similarity'], ascending=[True, False]).head(10).reset_index().drop(columns=["index", "Prob"])
     return output
