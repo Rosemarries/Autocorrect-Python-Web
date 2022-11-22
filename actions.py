@@ -176,5 +176,5 @@ def summary(word_l, sim,  probs, min_edit=[]):
     if not len(min_edit):
         output = df.sort_values(['Similarity'], ascending=False).head(10)
     else:
-        output = df.sort_values(['Min Edit', 'Similarity'], ascending=[True, False]).head(10)
+        output = df.sort_values(['Min Edit', 'Similarity'], ascending=[True, True]).head(10)
     return output
